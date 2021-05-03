@@ -34,9 +34,9 @@ def get_joint_probability(buzzwords, base_word_list, weibo_list):
     jp_word = {}
     length = len(weibo_list)
     for buzzword in buzzwords:
-        count = 0
         jp_word[buzzword] = {}
         for base_word in base_word_list:
+            count = 0
             for weibo in weibo_list:
                 if re.search(buzzword, weibo) and re.search(base_word, weibo):
                     count += 1
